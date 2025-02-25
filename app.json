@@ -13,13 +13,33 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "이 앱은 지도 기능을 위해 위치 정보가 필요합니다.",
+        "NSCameraUsageDescription": "이 앱은 사진 촬영을 위해 카메라 접근 권한이 필요합니다.",
+        "NSPhotoLibraryUsageDescription": "이 앱은 이미지 선택을 위해 사진 라이브러리 접근 권한이 필요합니다."
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "permissions": [
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION",
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE"
+      ],
+      "plugins": [
+        [
+          "expo-location",
+          {
+            "locationAlwaysAndWhenInUsePermission": "$(PRODUCT_NAME)에서 지도 기능을 위해 위치 정보에 액세스하려고 합니다."
+          }
+        ]
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png"
