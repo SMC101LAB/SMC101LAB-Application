@@ -57,10 +57,6 @@ export function useImagePicker() {
 
       const result = await ImagePicker.launchImageLibraryAsync(pickerOptions);
 
-      console.log(
-        'ImagePicker 결과:',
-        result.canceled ? '취소됨' : '이미지 선택됨'
-      );
       return result;
     } catch (error) {
       console.error('갤러리 열기 오류:', error);
