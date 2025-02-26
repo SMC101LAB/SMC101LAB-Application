@@ -1,16 +1,16 @@
 {
   "expo": {
-    "name": "SMC101LAB-APP",
-    "slug": "SMC101LAB-APP",
-    "version": "1.0.0",
+    "name": "SMC101LAB",
+    "slug": "SMC101LAB",
+    "versionCode": 1,
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
     "splash": {
       "image": "./assets/splash-icon.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "resizeMode": "cover",
+      "backgroundColor": "#001633"
     },
     "ios": {
       "supportsTablet": true,
@@ -18,7 +18,15 @@
         "NSLocationWhenInUseUsageDescription": "이 앱은 지도 기능을 위해 위치 정보가 필요합니다.",
         "NSCameraUsageDescription": "이 앱은 사진 촬영을 위해 카메라 접근 권한이 필요합니다.",
         "NSPhotoLibraryUsageDescription": "이 앱은 이미지 선택을 위해 사진 라이브러리 접근 권한이 필요합니다."
-      }
+      },
+      "plugins": [
+        [
+          "expo-location",
+          {
+            "locationAlwaysAndWhenInUsePermission": "$(PRODUCT_NAME)에서 지도 기능을 위해 위치 정보에 액세스하려고 합니다."
+          }
+        ]
+      ]
     },
     "android": {
       "adaptiveIcon": {
@@ -29,20 +37,11 @@
         "ACCESS_COARSE_LOCATION",
         "ACCESS_FINE_LOCATION",
         "CAMERA",
-        "READ_EXTERNAL_STORAGE",
-        "WRITE_EXTERNAL_STORAGE"
+        "READ_MEDIA_IMAGES"
       ],
-      "plugins": [
-        [
-          "expo-location",
-          {
-            "locationAlwaysAndWhenInUsePermission": "$(PRODUCT_NAME)에서 지도 기능을 위해 위치 정보에 액세스하려고 합니다."
-          }
-        ]
-      ]
-    },
-    "web": {
-      "favicon": "./assets/favicon.png"
+      "package": "com.kdhqwe.SMC101LABAPP",
+      "versionCode": 1,
+      "targetSdkVersion": 33
     }
   }
 }
