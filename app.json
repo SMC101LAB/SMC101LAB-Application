@@ -15,22 +15,18 @@
     "ios": {
       "supportsTablet": true,
       "infoPlist": {
-        "NSLocationWhenInUseUsageDescription": "이 앱은 지도 기능을 위해 위치 정보가 필요합니다.",
-        "NSCameraUsageDescription": "이 앱은 사진 촬영을 위해 카메라 접근 권한이 필요합니다.",
-        "NSPhotoLibraryUsageDescription": "이 앱은 이미지 선택을 위해 사진 라이브러리 접근 권한이 필요합니다.",
+        "NSLocationWhenInUseUsageDescription": "이 앱은 지도에서 사용자의 현재 위치를 표시하고 주변 급경사지를 찾기 위해 위치 정보가 필요합니다.",
+        "NSCameraUsageDescription": "이 앱은 코멘트 작성 시 급경사진 또는 현장의 사진 및 동영상을 등록하기 위해 카메라 접근 권한이 필요합니다.",
+        "NSPhotoLibraryUsageDescription": "이 앱은 코멘트 작성 시 급경사진 또는 현장의 사진 및 동영상을 등록하기 위해 사진 라이브러리 접근 권한이 필요합니다.",
+        "NSMicrophoneUsageDescription": "이 앱은 코멘트 작성 시 필요한 동영상 촬영을 위해 마이크 접근 권한이 필요합니다.",
+        "NSPhotoLibraryAddUsageDescription": "이 앱은 촬영한 사진 및 동영상을 저장하기 위해 사진 라이브러리 쓰기 권한이 필요합니다.",
         "ITSAppUsesNonExemptEncryption": false
       },
       "plugins": [
         [
           "expo-location",
           {
-            "locationAlwaysAndWhenInUsePermission": "$(PRODUCT_NAME)에서 지도 기능을 위해 위치 정보에 액세스하려고 합니다."
-          }
-        ],
-        [
-          "expo-location",
-          {
-            "locationAlwaysAndWhenInUsePermission": "$(PRODUCT_NAME)에서 지도 기능을 위해 위치 정보에 액세스하려고 합니다."
+            "locationAlwaysAndWhenInUsePermission": "$(PRODUCT_NAME)에서 지도 기능을 통해 사용자의 현재 위치를 표시하고 주변 시설을 찾기 위해 위치 정보가 필요합니다."
           }
         ]
       ],
@@ -47,9 +43,7 @@
         "CAMERA",
         "READ_MEDIA_IMAGES"
       ],
-      "package": "com.kdhqwe.SMC101LABAPP",
-      "versionCode": 1,
-      "targetSdkVersion": 33
+      "package": "com.kdhqwe.SMC101LABAPP"
     },
     "extra": {
       "eas": {
