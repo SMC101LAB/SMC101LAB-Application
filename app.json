@@ -1,28 +1,54 @@
 {
   "expo": {
-    "name": "SMC101LAB-APP",
-    "slug": "SMC101LAB-APP",
-    "version": "1.0.0",
+    "name": "SMC101LAB",
+    "slug": "SMC101LAB",
+    "versionCode": 1,
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
     "splash": {
       "image": "./assets/splash-icon.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "resizeMode": "cover",
+      "backgroundColor": "#001633"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "이 앱은 지도에서 사용자의 현재 위치를 표시하고 주변 급경사지를 찾기 위해 위치 정보가 필요합니다.",
+        "NSCameraUsageDescription": "이 앱은 코멘트 작성 시 급경사진 또는 현장의 사진 및 동영상을 등록하기 위해 카메라 접근 권한이 필요합니다.",
+        "NSPhotoLibraryUsageDescription": "이 앱은 코멘트 작성 시 급경사진 또는 현장의 사진 및 동영상을 등록하기 위해 사진 라이브러리 접근 권한이 필요합니다.",
+        "NSMicrophoneUsageDescription": "이 앱은 코멘트 작성 시 필요한 동영상 촬영을 위해 마이크 접근 권한이 필요합니다.",
+        "NSPhotoLibraryAddUsageDescription": "이 앱은 촬영한 사진 및 동영상을 저장하기 위해 사진 라이브러리 쓰기 권한이 필요합니다.",
+        "ITSAppUsesNonExemptEncryption": false
+      },
+      "plugins": [
+        [
+          "expo-location",
+          {
+            "locationAlwaysAndWhenInUsePermission": "$(PRODUCT_NAME)에서 지도 기능을 통해 사용자의 현재 위치를 표시하고 주변 시설을 찾기 위해 위치 정보가 필요합니다."
+          }
+        ]
+      ],
+      "bundleIdentifier": "com.kdhqwe.SMC101LABAPP"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "permissions": [
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION",
+        "CAMERA",
+        "READ_MEDIA_IMAGES"
+      ],
+      "package": "com.kdhqwe.SMC101LABAPP"
     },
-    "web": {
-      "favicon": "./assets/favicon.png"
+    "extra": {
+      "eas": {
+        "projectId": "03a7ac3a-231f-4d7b-a28f-5d1cac0213c1"
+      }
     }
   }
 }
